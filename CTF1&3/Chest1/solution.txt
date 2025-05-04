@@ -1,0 +1,9 @@
+steps:
+1.  Dio and Jotaro were supposedly chatting, but their messages were in a file named "enc.txt" between QLGZIL and WRL.
+2.  I first thought it was Caesar cipher, but it wasn't.
+3.  Then, before I tried to use another classical encryption technique,  I saw a pattern: d became w, i became r, and o became l. This looked like the letters were just in reverse order of the alphabet (a becomes z, b becomes y, etc.).
+4.  So, I wrote a code to decrypt the encrypted messages.
+5.  However, there were sentences in the messages surrounded by asterisks. I didn't understand these parts and thought about decrypting them again.
+6.  But before trying that, I looked at the very last sentence in the decrypted messages and saw (CMPN*i_luv_jojo*).
+
+Key: CMPN{i_luv_jojo}

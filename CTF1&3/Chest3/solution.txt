@@ -1,0 +1,6 @@
+steps:
+The code takes what I type in (key) and makes changes to each character (switching bits operations). Then it checks if the key after these operations matches an array of characters called expected.
+To find the key, I wrote code that takes that array of characters and does the switching operations in reverse order. That way, I could see what the original key.
+
+
+key : s0m3_m0r3_b1t_sh1fTiNg_91c642112
