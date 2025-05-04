@@ -1,0 +1,37 @@
+Solution:
+
+1. Identify Main Function
+   We began by examining the 'main' function which initializes a series of variables and performs checks on command-line arguments.
+
+
+2. Encoded Data Storage
+   Several MOV instructions store long hexadecimal constants into stack variables. These constants, when interpreted as ASCII strings in little-endian order, form the encoded flag.
+
+3. Encoding Breakdown
+   The program loads the following 32 bytes of encoded data (but only uses the first 25 bytes):
+      
+   This corresponds to the encoded flag in memory.
+
+4. Key Setup
+   Another sequence of MOV instructions stores 32 bytes of key data:
+      
+
+5. Password Length Check
+   The input password is validated to be exactly 25 characters long
+   
+6. XOR Operation
+   The program uses XOR to compare each character in the input against the encoded flag:
+  
+   user_input[i] ^ key[i] == encoded[i]
+   =>
+   user_input[i] = encoded[i] ^ key[i]
+   
+
+7. Recovering the Password
+   Using a simple Python script, we XOR the first 25 bytes of the encoded flag with the key to recover the original password.
+
+8. Final Output
+   The decoded password (flag) is:
+   
+   FLAG{X0r_1s_0ld_but_g0ld}
+   
